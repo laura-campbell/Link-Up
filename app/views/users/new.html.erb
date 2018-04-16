@@ -1,2 +1,18 @@
-<h1>User#new</h1>
-<p>Find me in app/views/user/new.html.erb</p>
+<%= render "errors/flash_errors" %>
+
+<h1>New User</h1>
+
+<%= form_for @user do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %><br>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %><br>
+  <%= f.label :username %>
+  <%= f.text_field :username %><br>
+  <%= f.label :email %>
+  <%= f.text_field :email %><br>
+  <%= f.submit %>
+<% end %>
+
+
+<!-- f.collection_check_boxes :interest_ids, @interests, :id, :name -->

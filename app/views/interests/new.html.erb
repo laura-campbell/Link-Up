@@ -1,2 +1,8 @@
-<h1>Interests#new</h1>
-<p>Find me in app/views/interests/new.html.erb</p>
+<%= render "errors/flash_errors" %>
+
+<h1>New Interest</h1>
+<%= form_for @interest do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>
