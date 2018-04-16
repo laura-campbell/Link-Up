@@ -11,8 +11,6 @@
   <%= f.text_field :username %><br>
   <%= f.label :email %>
   <%= f.text_field :email %><br>
+  <%= f.collection_check_boxes :interest_ids, @interests, :id, :name %>
   <%= f.submit %>
 <% end %>
-
-
-<!-- f.collection_check_boxes :interest_ids, @interests, :id, :name -->

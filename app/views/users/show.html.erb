@@ -1,2 +1,20 @@
-<h1>User#show</h1>
-<p>Find me in app/views/user/show.html.erb</p>
+<%= @user.first_name %> <%= @user.last_name %>
+
+
+<% if !@user.interests.empty? %>
+  <h3>Interests</h3>
+  <ul>
+    <% @user.interests.each do |interest| %>
+      <li><%= link_to interest.name, interest %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<% if @user.link_ups.length > 0 %>
+  <h3>Link Ups</h3>
+  <ul>
+    <% @user.link_ups.each do |link_up| %>
+      <li><%= link_to link_up.name, link_up %></li>
+    <% end %>
+  </ul>
+<% end %>
