@@ -13,7 +13,7 @@ s_summer = User.create(first_name: "Scott", last_name: "Summers", username: "Cyc
 c_xavier = User.create(first_name: "Charles", last_name: "Xavier", username: "Professor X", email: "charlesxavier@gmail.com")
 e_linsher = User.create(first_name: "Eric", last_name: "Linsher", username: "Magneto", email: "ericlinsher@gmail.com")
 b_banner = User.create(first_name: "Bruce", last_name: "Banner", username: "The Hulk", email: "brucebanner@gmail.com" )
-r_richards = User.create(first_name: "Reed", last_name: "Richards"), username: "Mr.Fantastic", email: "reedrichards@gmail.com")
+r_richards = User.create(first_name: "Reed", last_name: "Richards", username: "Mr.Fantastic", email: "reedrichards@gmail.com")
 n_summers = User.create(first_name: "Nathan", last_name: "Summers", username: "Cable", email: "nathansummmers@gmail.com")
 
 

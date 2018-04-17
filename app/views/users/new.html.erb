@@ -19,9 +19,9 @@
     <div>
       <%= f.label :email %> :<br>
       <%= f.text_field :email %>
+    <%= f.collection_check_boxes :interest_ids, @interests, :id, :name  %>
+
     </div>
     <%= f.submit %>
   <% end %>
   </div>
-
-<!-- f.collection_check_boxes :interest_ids, @interests, :id, :name -->

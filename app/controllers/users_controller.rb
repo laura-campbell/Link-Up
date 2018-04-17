@@ -1,17 +1,16 @@
 class UsersController < ApplicationController
-  def index
-  end
 
   def show
+    @user = User.find(params[:id])
   end
 
   def new
     @user = User.new
+    @interests = Interest.all
   end
 
   def create
     @user = User.create(user_params)
-    @interests = Interest.all
     if @user.valid?
       redirect_to @user
     else
@@ -21,12 +20,16 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = User.find(params[:id])
+    @interests = Interest.all
   end
 
   def update
+    @user = User.find(params[:id])
   end
 
   def destroy
+    @user = User.find(params[:id])
   end
 
 private
