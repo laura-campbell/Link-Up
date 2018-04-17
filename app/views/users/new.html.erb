@@ -26,6 +26,6 @@
       <%= f.label 'Please select Interest: ' %>
       <%= f.collection_select :interest_ids, @interests, :id, :name  %>
     </div>
-    <%= f.submit, {:class => 'big_button'} %>
+    <%= f.submit :class => 'big_button' %>
   <% end %>
   </div>
