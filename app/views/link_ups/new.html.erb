@@ -1,20 +1,44 @@
+<div class="form_container">
+
 <h1>Forge a Link-Up!</h1>
 
 <%= form_for @link_up do |f| %>
+<div>
   <%= f.label :name %>
   <%= f.text_field :name, placeholder: "Name this LinkUp!" %>
+</div>
 
+<div class="">
   <%= f.label :user_id %>
   <%= f.text_field :user_id, placeholder: "Enter user id(for now)" %>
+</div>
 
+<div class="">
   <%= f.label "location"%>
   <%= f.collection_select(:location_id, @locations, :id, :name) %>
+</div>
 
+<div class="">
   <%= f.label "interest"%>
   <%= f.collection_select(:interest_id, @interests, :id, :name) %>
+</div>
 
+<div class="">
   <%= f.label "guest"%>
   <%= f.collection_select(:guest_id, @users, :id, :first_name) %>
+</div>
+
+<p>or search for guests with similiar interests</p>
+
+<%= form_tag link_ups_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search], placeholder: "Type your interest here" %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+<br>
+<!-- will need add guest button to add to linkup -->
 
   <%= f.submit %>
 <% end %>
+</div>

@@ -1,6 +1,5 @@
 class LinkUpsController < ApplicationController
   def index
-    @locations = Location.all
   end
   #
   def show
