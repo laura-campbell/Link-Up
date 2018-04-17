@@ -1,0 +1,7 @@
+<h1>Available Locations for Linkups</h1>
+
+<ul>
+  <% @locations.each do |location| %>
+  <li> <%= link_to location.name, location.link_ups, {:class => 'sml_btn'} %> </li>
+  <% end %>
+</ul>
