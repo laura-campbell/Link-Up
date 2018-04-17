@@ -6,8 +6,8 @@ class User < ApplicationRecord
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
 
 
-  has_many :link_ups
-  has_many :guests, through: :link_ups
+  has_many :user_guests
+  has_many :guests, through: :user_guests
   has_many :user_interests
   has_many :interests, through: :user_interests
 

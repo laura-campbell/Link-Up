@@ -19,9 +19,13 @@
     <div>
       <%= f.label :email %> :<br>
       <%= f.text_field :email %>
-    <%= f.collection_check_boxes :interest_ids, @interests, :id, :name  %>
+
 
     </div>
-    <%= f.submit %>
+    <div class="select_menu">
+      <%= f.label 'Please select Interest: ' %>
+      <%= f.collection_select :interest_ids, @interests, :id, :name  %>
+    </div>
+    <%= f.submit, {:class => 'big_button'} %>
   <% end %>
   </div>

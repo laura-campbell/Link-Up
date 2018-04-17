@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+  @media  (min-width:960px) {
+  .app_container {
+  max-width: 960px;
+  margin:auto;
+}
+}

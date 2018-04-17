@@ -1,5 +1,12 @@
-<%= @user.first_name %> <%= @user.last_name %>
+<h2><%= @user.first_name %> <%= @user.last_name %>
+  </h2>
+  <div>
+    <p> <%= @user.username %> </p>
+    <p> <%= @user.email %> </p>
+  </div>
 
+  <p> <%= link_to "Create Link Up", new_link_up_path, {:class => "sml_btn"}  %> </p>
+  <p> <%= link_to "Find Link Up", link_ups_path, {:class => "sml_btn"} %> </p>
 
 <% if !@user.interests.empty? %>
   <h3>Interests</h3>
