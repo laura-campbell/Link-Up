@@ -1,7 +1,7 @@
 class LinkUpsController < ApplicationController
   def index
   end
-  #
+  
   def show
     @link_up = LinkUp.find(params[:id])
     @location =  Location.find(@link_up.location_id)
