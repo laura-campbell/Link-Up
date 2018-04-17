@@ -3,8 +3,13 @@ class LinkUpsController < ApplicationController
     @locations = Location.all
   end
   #
-  # def show
-  # end
+  def show
+    @link_up = LinkUp.find(params[:id])
+    @location =  Location.find(@link_up.location_id)
+    @user = User.find(@link_up.user_id)
+    @interest = Interest.find(@link_up.interest_id)
+    @guest = User.find(@link_up.guest_id)
+  end
 
   def new
     @link_up = LinkUp.new
