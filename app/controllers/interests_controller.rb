@@ -1,6 +1,7 @@
 class InterestsController < ApplicationController
   def index
     @interests = Interest.all
+    @search_interests = Interest.where("name LIKE ? ", "%#{params[:search]}%")
   end
 
   def show
@@ -33,9 +34,10 @@ class InterestsController < ApplicationController
 
   def destroy
     @interest = Interest.find(params[:id])
-
   end
 
+  def search
+  end
   private
 
   def interest_params

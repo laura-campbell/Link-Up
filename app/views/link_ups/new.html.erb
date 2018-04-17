@@ -28,15 +28,7 @@
   <%= f.collection_select(:guest_id, @users, :id, :first_name) %>
 </div>
 
-<p>or search for guests with similiar interests</p>
 
-<%= form_tag link_ups_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search, params[:search], placeholder: "Type your interest here" %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
-<% end %>
-<br>
 <!-- will need add guest button to add to linkup -->
 
   <%= f.submit %>
