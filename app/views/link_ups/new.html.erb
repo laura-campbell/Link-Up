@@ -3,19 +3,18 @@
 <%= form_for @link_up do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name, placeholder: "Name this LinkUp!" %>
-  <%= f.label :host_first_name %>
-  <!-- Can we prepopulate this with host's info? -->
-  <%= f.text_field :first_name, placeholder: "Host's First Name" %>
-  <%= f.label :host_last_name %>
-  <%= f.text_field :last_name, placeholder: "Host's First Name" %>
-  <%= f.label :email %>
-  <%= f.text_field :email, placeholder: "Host's Email" %>
-  <%= f.label :username %>
-  <%= f.text_field :username, placeholder: "Host's Username" %>
 
-  <%= f.label :location_id%>
+  <%= f.label :user_id %>
+  <%= f.text_field :user_id, placeholder: "Enter user id(for now)" %>
+
+  <%= f.label "location"%>
   <%= f.collection_select(:location_id, @locations, :id, :name) %>
 
-  <!-- also a dropdown to select which interest corresponds - submit interest id param -->
+  <%= f.label "interest"%>
+  <%= f.collection_select(:interest_id, @interests, :id, :name) %>
+
+  <%= f.label "guest"%>
+  <%= f.collection_select(:guest_id, @users, :id, :first_name) %>
+
   <%= f.submit %>
 <% end %>

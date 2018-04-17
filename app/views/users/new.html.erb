@@ -1,16 +1,27 @@
 <%= render "errors/flash_errors" %>
 
-<h1>New User</h1>
+<div class="form_container">
+  <h1>New User</h1>
 
-<%= form_for @user do |f| %>
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %><br>
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %><br>
-  <%= f.label :username %>
-  <%= f.text_field :username %><br>
-  <%= f.label :email %>
-  <%= f.text_field :email %><br>
-  <%= f.collection_check_boxes :interest_ids, @interests, :id, :name %>
-  <%= f.submit %>
-<% end %>
+  <%= form_for @user do |f| %>
+<div>
+  <%= f.label :first_name %> :<br>
+  <%= f.text_field :first_name %>
+</div>
+  <div>
+    <%= f.label :last_name %> :<br>
+    <%= f.text_field :last_name %>
+  </div>
+    <div>
+      <%= f.label :username %> :<br>
+      <%= f.text_field :username %>
+    </div>
+    <div>
+      <%= f.label :email %> :<br>
+      <%= f.text_field :email %>
+    <%= f.collection_check_boxes :interest_ids, @interests, :id, :name  %>
+
+    </div>
+    <%= f.submit %>
+  <% end %>
+  </div>

@@ -1,3 +1,3 @@
 class Location < ApplicationRecord
-  has_many :link_ups
+  belongs_to :link_ups
 end
