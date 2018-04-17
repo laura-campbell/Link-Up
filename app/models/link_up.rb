@@ -1,6 +1,4 @@
 class LinkUp < ApplicationRecord
-  belongs_to :user
-  belongs_to :guest, class_name: "User"
-
-  has_one :location
+  belongs_to :user_guest
+  belongs_to :location
 end
