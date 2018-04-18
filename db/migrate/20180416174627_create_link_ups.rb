@@ -5,6 +5,7 @@ class CreateLinkUps < ActiveRecord::Migration[5.1]
       t.string :name
       t.integer :location_id
       t.integer :interest_id
+      t.datetime :datetime
       t.timestamps
     end
   end

@@ -1,2 +1,12 @@
-<h1>UserInterests#new</h1>
+<h1>User Interests</h1>
 <p>Find me in app/views/user_interests/new.html.erb</p>
+<div class="select_menu">
+  <%= form_for @user_interest do |f|%>
+  <%= f.label 'Enter user Id: ' %>
+  <%= f.text_field :user_id  %>
+
+  <%= f.label 'Please select Interest: ' %>
+  <%= f.collection_select :interest_id, @interests, :id, :name  %>
+</div>
+<%= f.submit :class => 'big_button' %>
+<% end %>
