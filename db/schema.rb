@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20180417190857) do
     t.string "name"
     t.integer "location_id"
     t.integer "interest_id"
+    t.datetime "datetime"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_guest_id"], name: "index_link_ups_on_user_guest_id"
